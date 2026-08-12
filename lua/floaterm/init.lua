@@ -360,6 +360,13 @@ end
 function M.setup(opts)
   config = vim.tbl_deep_extend("force", vim.deepcopy(defaults), opts or {})
   if config.rpc then rpc.ensure_server() end
+  -- HACK:
+  -- Rerun `lualine` setup,
+  -- to have possible lazy-loaded `floaterm` available
+  -- The `lualine` docs state, that `.refresh()` should be enough,
+  -- but it is not working on this side of the world 🤷.
+  local ok, lualine = pcall(require, "lualine")
+  if ok and lualine then lualine.setup() end
 end
 
 ---@return boolean
