@@ -54,7 +54,7 @@ hide it while keeping the shell running.
 
 ```lua
 {
-  "mistweaverco/floaterm.nvim",
+  "dont-be-evil-company/floaterm.nvim",
   config = function()
     vim.keymap.set("n", "<leader>ft", require("floaterm").toggle, { desc = "Toggle floaterm" })
   end,
@@ -65,7 +65,7 @@ hide it while keeping the shell running.
 
 ```lua
 {
-  source = "mistweaverco/floaterm.nvim",
+  source = "dont-be-evil-company/floaterm.nvim",
   checkout = "main",
   config = function()
     vim.keymap.set("n", "<leader>ft", require("floaterm").toggle, { desc = "Toggle floaterm" })
@@ -188,8 +188,8 @@ require("floaterm").has_unseen_activity()  -- true when hidden output arrived
 
 
 
-[badge-discord]: https://mistweaverco.com/assets/badges/discord.svg
-[discord]: https://mistweaverco.com/discord
-[badge-made-with-love]: https://mistweaverco.com/assets/badges/made-with-love.svg
-[contributors]: https://github.com/mistweaverco/floaterm.nvim/graphs/contributors
+[badge-discord]: https://the-dont-be-evil-company.com/assets/badges/discord.svg
+[discord]: https://the-dont-be-evil-company.com/discord
+[badge-made-with-love]: https://the-dont-be-evil-company.com/assets/badges/made-with-love.svg
+[contributors]: https://github.com/dont-be-evil-company/floaterm.nvim/graphs/contributors
 [opengraph-image]: ./assets/floaterm.nvim-opengraph.png
